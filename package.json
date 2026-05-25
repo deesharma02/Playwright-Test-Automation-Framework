@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
+    "test:ci": "cross-env CI=true PLAYWRIGHT_WORKERS=4 playwright test",
     "test:dev": "cross-env ENV=dev playwright test",
     "test:qa": "cross-env ENV=qa playwright test",
     "test:uat": "cross-env ENV=uat playwright test",
