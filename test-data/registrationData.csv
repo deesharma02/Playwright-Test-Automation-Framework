@@ -1,0 +1,2 @@
+firstName,lastName,email,telephone,password,confirmPassword,acceptPrivacyPolicy
+Csv,User,csv.user.{{timestamp}}@example.com,9876543211,Password@123,Password@123,true

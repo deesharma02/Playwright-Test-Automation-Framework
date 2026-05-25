@@ -1,0 +1,11 @@
+[
+  {
+    "firstName": "Json",
+    "lastName": "User",
+    "email": "json.user.{{timestamp}}@example.com",
+    "telephone": "9876543210",
+    "password": "Password@123",
+    "confirmPassword": "Password@123",
+    "acceptPrivacyPolicy": true
+  }
+]
