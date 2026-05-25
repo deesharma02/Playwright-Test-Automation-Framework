@@ -11,6 +11,7 @@ export class MyAccountPage extends BrowserUtilities {
     private readonly registerLinkLocator: Locator;
     private readonly goToHomePageButtonLocator: Locator;
     private readonly addressBookLocator: Locator;
+    private readonly orderHistoryLocator: Locator;
 
     constructor(page: Page) {
         super(page);
@@ -22,6 +23,7 @@ export class MyAccountPage extends BrowserUtilities {
         this.registerLinkLocator = page.getByRole("link", { name: "Register" });
         this.goToHomePageButtonLocator = page.getByRole('listitem').filter({ hasText: /^$/ });
         this.addressBookLocator = page.getByRole('link', { name: 'Address Book', exact: true });
+        this.orderHistoryLocator = page.getByRole("link", { name: "Order History" }).first();
     }
 
     async clickOnLogout(): Promise<void> {
@@ -43,6 +45,10 @@ export class MyAccountPage extends BrowserUtilities {
 
     async clickOnAddressBook(): Promise<void> {
         await this.click(this.addressBookLocator);
+    }
+
+    async clickOnOrderHistory(): Promise<void> {
+        await this.click(this.orderHistoryLocator);
     }
 
 

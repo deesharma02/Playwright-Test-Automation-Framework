@@ -10,6 +10,8 @@ import { AddressPage } from "../pages/AddressPage";
 import { ProductDetailPage } from "../pages/ProductDetailPage";
 import { ShoppingCartPage } from "../pages/ShoppingCartPage";
 import { CheckOutPage } from "../pages/CheckOutPage";
+import { OrderHistoryPage } from "../pages/OrderHistoryPage";
+import { ProductReturnPage } from "../pages/ProductReturnPage";
 
 type CustomFixtures = {
     appConfig: EnvironmentConfig;
@@ -22,6 +24,8 @@ type CustomFixtures = {
     productDetailPage: ProductDetailPage;
     shoppingCartPage: ShoppingCartPage;
     checkOutPage: CheckOutPage;
+    orderHistoryPage: OrderHistoryPage;
+    productReturnPage: ProductReturnPage;
 };
 
 export const test = baseTest.extend<CustomFixtures>({
@@ -58,6 +62,12 @@ export const test = baseTest.extend<CustomFixtures>({
     },
     checkOutPage: async ({ page }, use) => {
         await use(new CheckOutPage(page));
+    },
+    orderHistoryPage: async ({ page }, use) => {
+        await use(new OrderHistoryPage(page));
+    },
+    productReturnPage: async ({ page }, use) => {
+        await use(new ProductReturnPage(page));
     },
 });
 
